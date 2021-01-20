@@ -7,22 +7,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  CameraPosition _initialLocation = CameraPosition(target: LatLng(0.0, 0.0));
-  GoogleMapController mapController;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GoogleMap(
-        initialCameraPosition: _initialLocation,
-        myLocationEnabled: true,
-        myLocationButtonEnabled: false,
-        mapType: MapType.normal,
-        zoomGesturesEnabled: true,
-        zoomControlsEnabled: false,
-        onMapCreated: (GoogleMapController controller) {
-          mapController = controller;
-        },
-      ),
+      body: GoogleMap(),
     );
   }
 }
